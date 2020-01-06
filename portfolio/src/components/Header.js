@@ -6,7 +6,7 @@ import Nav from './Nav'
 const Header = () => {
   return (
     <div>
-      <p>Hey I'm a Header!</p>
+      <h1>NOLAN GILES</h1>
       <Nav />
     </div>
   )
