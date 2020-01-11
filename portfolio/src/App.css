@@ -65,6 +65,10 @@ a {
 .portfolio-project:hover {
   transform: scale(1.1); 
 }
+.project-img img{
+  width: 100%;
+  max-height: 188px;
+}
 .footer {
   border: 1px solid black;
   width: 80vw;
