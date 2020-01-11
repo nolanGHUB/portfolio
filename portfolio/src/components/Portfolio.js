@@ -7,15 +7,7 @@ class Portfolio extends React.Component {
     this.state = {
       projects: [
         {
-          img: '/images/test-img.png',
-          title: 'portfolio',
-          description: '',
-          tech: [],
-          link: '',
-          gitlink: '',
-        },
-        {
-          img: '/images/test-img.png',
+          img: '/images/blackjackss2.png',
           title: 'blackjack!',
           description: '',
           tech: [],
@@ -23,11 +15,19 @@ class Portfolio extends React.Component {
           gitlink: '',
         },
         {
-          img: '/images/test-img.png',
+          img: '/images/worthwatchingss.png',
           title: 'Worth Watching',
           description: '',
           tech: [],
           link: 'https://worthwatching.surge.sh',
+          gitlink: '',
+        },
+        {
+          img: '/images/test-img.png',
+          title: 'My Portfolio',
+          description: '',
+          tech: [],
+          link: '',
           gitlink: '',
         },
         {
@@ -48,6 +48,9 @@ class Portfolio extends React.Component {
         {
           this.state.projects.map((project, key) => (
             <div className="portfolio-project" key={key}>
+              <div className="project-img">
+                <img src={project.img} alt="project screenshot"></img>
+              </div>
               <div className="project-title">
                 {project.title}
               </div>
