@@ -1,8 +1,12 @@
+html {
+  background-color: #456990;
+}
 .App {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: #E4FDE1;
 }
 .header {
   text-align: center;

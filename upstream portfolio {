@@ -1,0 +1,81 @@
+upstream portfolio {
+ server 127.0.0.1:8080;
+ keepalive 64;
+}
+server {
+ listen 80;
+ server_name nolangiles.com;
+ root /portfolio/portfolio/build;
+ index index.html;
+ 
+ location / {
+ proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+ proxy_set_header Host $http_host;
+ proxy_set_header X-NginX-Proxy true;
+ proxy_http_version 1.1;
+ proxy_set_header Upgrade $http_upgrade;
+ proxy_set_header Connection “upgrade”;
+ proxy_max_temp_file_size 0;
+ proxy_pass http://portfolio/;
+ proxy_redirect off;
+ proxy_read_timeout 240s;
+ }
+}
+
+upstream my_nodejs_upstream {
+ server 127.0.0.1:5000;
+ keepalive 64;
+}
+server {
+ listen 80;
+ server_name my_nodejs_server;
+ root project_root;
+ 
+ location / {
+ proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+ proxy_set_header Host $http_host;
+ proxy_set_header X-NginX-Proxy true;
+ proxy_http_version 1.1;
+ proxy_set_header Upgrade $http_upgrade;
+ proxy_set_header Connection “upgrade”;
+ proxy_max_temp_file_size 0;
+ proxy_pass http://my_nodejs_upstream/;
+ proxy_redirect off;
+ proxy_read_timeout 240s;
+ }
+}
+
+
+server {
+  listen 80;
+  server_name nolangiles.com;
+  location / {
+    proxy_pass http://localhost:8080;
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection 'upgrade';
+    proxy_set_header Host $host;
+    proxy_cache_bypass $http_upgrade;
+   }
+}
+
+listen [::]:80;
+
+server {
+	listen 80;
+	listen [::]:80;
+
+	server_name nolangiles.com;
+
+	root /portfolio/portfolio/build;
+	index index.html;
+
+	location / {
+    proxy_pass http://localhost:8080;
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection 'upgrade';
+    proxy_set_header Host $host;
+    proxy_cache_bypass $http_upgrade;
+   }
+}
