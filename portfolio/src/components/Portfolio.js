@@ -33,10 +33,18 @@ class Portfolio extends React.Component {
         {
           img: '/images/quizlyss.png',
           title: 'Quizly',
-          description: 'A full-stack quiz game site that tracks high-scores and allows for user submissions.',
-          tech: ['React  • ', 'Express  • ', 'Sequelize'],
+          description: 'A full-stack quiz game site that tracks high-scores and allows for user submissions. Admin accounts can approve, edit and delete user submitted questions and answers before entering into the game.',
+          tech: ['React  • ', 'Express  • ', 'Sequelize', 'Postgres'],
           link: 'http://quizly.surge.sh/',
           gitlink: 'https://github.com/Tambini/quizly',
+        },
+        {
+          img: '/images/chattyss.png',
+          title: 'Chatty',
+          description: 'Production site coming soon!  A full re-creation of aol instant messenger with a group chat and direct messenging. Friend("buddy") list can add and remove friends.  Messages, full JWT authentication user creation and login handled by the Ruby/Rails backend server acting as an API.',
+          tech: ['React  •  ', 'Ruby  •  ', 'Rails  •  ', 'ActionCable'],
+          link: 'https://www.youtube.com/watch?v=o-sFKstuNHM',
+          gitlink: 'https://github.com/nolanGHUB/P4_Chatty'
         },
       ]
     }
@@ -48,7 +56,8 @@ class Portfolio extends React.Component {
         {
           this.state.projects.map((project, key) => (
             <div className="portfolio-project" key={key}>
-              <div className="project-img">
+              {/* <div className="project-img"> */}
+              <div className={key % 2 === 0 ? "project-img" : "project-img  order-swap"}>
                 <img src={project.img} alt="project screenshot"></img>
               </div>
               <div className="project-text">
@@ -59,7 +68,7 @@ class Portfolio extends React.Component {
                   {project.description}
                 </div>
                 <div className="project-technologies">
-                  {project.tech.map((tech, key) =>
+                  {project.tech.map((tech) =>
                     <span className="project-technology">
                       {tech}
                     </span>
@@ -67,7 +76,7 @@ class Portfolio extends React.Component {
 
                 </div>
                 <div className="project-link">
-                  <a className=" project-link-clickable" href={project.link} target="_blank" rel="noopener noreferrer"> Visit the deployed site </a>
+                  <a className=" project-link-clickable" href={project.link} target="_blank" rel="noopener noreferrer">{project.title === "Chatty" ? 'Watch demo video' : 'Visit the deployed site'}</a>
                 </div>
               </div>
             </div>
