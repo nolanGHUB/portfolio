@@ -20,11 +20,13 @@ class App extends React.Component {
   render() {
     return (
       <div className="App" >
-        <Header />
-        <About />
-        <Portfolio
-          portfolioList={this.state.portfolioList}
-        />
+        <main className='main'>
+          <Header />
+          <About />
+          <Portfolio
+            portfolioList={this.state.portfolioList}
+          />
+        </main>
         <Technologies
           techList={this.state.techList}
         />
