@@ -6,11 +6,15 @@ import Nav from './Nav'
 const Header = () => {
   return (
     <div className="header">
-      <div className="header-title">NOLAN GILES</div>
-      <div className="header-titles">
-        Software Engineer
+      <div className="header-left">
+        <div className="header-title">Nolan Giles</div>
+        <div className="header-titles">
+          Software Engineer
+        </div>
       </div>
-      <Nav />
+      <div className="header-right">
+        <Nav />
+      </div>
     </div>
   )
 }
