@@ -1,86 +1,206 @@
 html {
-  background-color: #456990;
+  background-color: #E4E4E4;
 }
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+}
+
 .App {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #E4FDE1;
+  color: #373737;
+  font-family: 'IBM Plex Sans Regular';
+  font-weight: 400;
 }
+
+.main {
+  margin: 4rem;
+}
+
 .header {
-  text-align: center;
-  width: 80vw;
-  border: 1px solid black;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
 }
+
+.header-left {
+  width: 40%;
+}
+
+.header-right {
+  width: 60%;
+}
+
 .header-title {
-  font-size: 4rem;
+  font-family: "IBM Plex Sans";
+  font-size: 72px;
+  line-height: 94px;
 }
+
 .header-titles {
-  font-size: 1.45rem;
+  color: #727272;
+  font-family: "IBM Plex Sans";
+  font-size: 28px;
+  line-height: 37px;
 }
+
 .nav-nav {
   display: flex;
   justify-content: space-around;
   margin: 1rem 0;
+  color: #373737;
+  font-family: "IBM Plex Mono Medium";
+  font-size: 16px;
+  letter-spacing: 2px;
+  line-height: 20px;
 }
-a {
-  color: black;
-  text-decoration: none;
-}
+
 .technologies {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   flex-wrap: wrap;
+  background-color: #373737;
+  color: #D8D8D8;
+  height: 30vh;
+  width: 100vw;
+  font-family: "IBM Plex Mono Medium";
+  font-size: 16px;
+  letter-spacing: 3px;
+  line-height: 48px;
+  text-align: center;
 }
+
+.technologies-title {
+  color: #D8D8D8;
+  font-family: "IBM Plex Sans";
+  font-size: 48px;
+  line-height: 62px;
+}
+
+.technologies-tech-list {
+  display: flex;
+  justify-content: center;
+}
+
 .tech-list {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
-  max-width: 6em;
-  margin: 1em;
-  height: 4em;
+  margin: 0 1rem;
 }
+
 .tech-img {
-  max-width: 2em;
+  max-width: 1.5em;
 }
-.about {
-  margin: 2rem;
-}
+
 .about-description {
-  width: 65vw;
+  color: #373737;
+  font-family: "IBM Plex Sans";
+  font-size: 40px;
+  line-height: 62px;
+  margin: 3rem 0 6rem 0;
 }
+
 .portfolio {
-  width: 70vw;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
   margin-bottom: 1rem;
 }
+
 .portfolio-project {
-  width: 18rem;
-  height: 15rem;
-  margin: 2rem;
+  display: flex;
+  height: 50vh;
   text-align: center;
-  box-shadow: rgba(0, 0, 0, 0.5) 2px 2px 5px 0px;
-  transition: all .2s ease-in-out; 
+  /* box-shadow: rgba(0, 0, 0, 0.5) 2px 2px 5px 0px; */
+  /* transition: all .2s ease-in-out; */
+  margin-bottom: 3rem; 
 }
-.portfolio-project:hover {
+
+/* .portfolio-project:hover {
   transform: scale(1.1); 
-}
-.project-img img{
-  width: 100%;
-  max-height: 188px;
-}
-.footer {
-  border: 1px solid black;
-  width: 80vw;
-  text-align: center;
-}
-.center-alignment {
-  width: 100%;
+} */
+
+.project-text {
+  width: 50%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  padding: 4rem;
+  background-color: #B8B8B8;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.project-title {
+  font-family: "IBM Plex Sans";
+  font-size: 48px;
+  line-height: 62px;
+  margin-bottom: 1rem;
+}
+
+.project-description {
+  font-family: "IBM Plex Sans";
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.project-technologies {
+  margin: 1rem 0;
+}
+
+.project-technology {
+  font-family: "IBM Plex Mono Medium";
+  font-size: 14px;
+  letter-spacing: 1.75px;
+  line-height: 18px;
+  color: #666666;
+}
+
+.project-img {
+  width: 50%;
+}
+
+.project-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-link {
+  font-family: "IBM Plex Mono Medium";
+  font-size: 16px;
+  letter-spacing: 2px;
+  line-height: 20px;
+}
+
+.project-link-clickable {
+  border-bottom: 3px solid #D8D8D8;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  color: #373737;
+  background-color: #E4E4E4;
+  width: 100vw;
+  height: 30vh;
+}
+
+.footer-title {
+  color: #373737;
+  font-family: "IBM Plex Sans";
+  font-size: 48px;
+  line-height: 62px;
 }
