@@ -17,7 +17,7 @@ class Portfolio extends React.Component {
         {
           img: '/images/worthwatchingss3.png',
           title: 'Worth Watching',
-          description: 'Worth Watching is designed with the avid TV watcher in mind, highlighting the overall and weekly trending shows of the season. As well as showing whats airing that day and allowing for further refinded searches. Detailed show descriptions and embedded trailers for almost every show using the massive themoviedb.org database as an API call to fill out the details.',
+          description: 'Worth Watching is designed with the avid TV watcher in mind, highlighting the overall and weekly trending shows of the season. Showing whats airing today as well as detailed show descriptions and embedded trailers for almost every show using the massive themoviedb.org database as an API call to fill out the details.',
           tech: ['React  • ', 'Axios  • ', 'themoviedb.org API'],
           link: 'https://worthwatching.surge.sh',
           gitlink: 'https://github.com/nolanGHUB/project_2',
