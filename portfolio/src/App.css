@@ -104,8 +104,8 @@ body {
 .about-description {
   color: #373737;
   font-family: "IBM Plex Sans";
-  font-size: 40px;
-  line-height: 62px;
+  font-size: 36px;
+  line-height: 52px;
   margin: 3rem 0 6rem 0;
 }
 
@@ -207,4 +207,90 @@ body {
 
 .order-swap {
   order: 1;
+}
+
+@media only screen and (max-width: 1068px) {
+  .main {
+    margin: 0;
+  }
+
+  .header {
+    flex-direction: column;
+  }
+
+  .header-left {
+    width: 100%;
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-right {
+    width: 100%;
+    order: 0;
+    border-bottom: 1px groove;
+  } 
+
+  .about-description {
+    font-size: 32px;
+    line-height: 40px;
+    padding: 5px;
+  }
+}
+
+@media only screen and (max-width: 875px) {
+  .portfolio-project {
+    flex-direction: column;
+    align-items: center;
+    height: 80vh;
+    padding: 5px;
+  }
+
+  .project-img {
+    width: 75vw;
+    height: 50%;
+  }
+
+  .project-text {
+    width: 75vw;
+    padding: 1rem;
+    height: 50%;
+  }
+
+  .order-swap {
+    order: 0;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .App {
+    justify-content: left;
+    align-items: unset;
+  }
+
+  .project-img {
+    width: 100vw;
+  }
+
+  .project-text {
+    width: 100vw;
+  }
+
+  .header-title {
+    font-size: 55px;
+  }
+
+  .about-description {
+    font-size: 24px;
+    line-height: 26px;
+  }
+
+  .technologies {
+    flex-wrap: nowrap;
+  }
+
+  .technologies-tech-list {
+    flex-wrap: wrap;
+  }
 }

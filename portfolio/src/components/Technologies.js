@@ -89,7 +89,7 @@ class Technologies extends React.Component {
             this.approvedTech().map((tech, key) => (
               <div key={key} className="tech-list">
                 {/* <img src={tech.img} alt="tech-icon" className="tech-img"></img> */}
-                <div className="tech-name">{tech.name}</div>•
+                <div className="tech-name">{tech.name}</div>
               </div>
             ))
           }
